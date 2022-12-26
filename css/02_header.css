@@ -1,0 +1,81 @@
+header {
+  height: 5em;
+  /* 스크롤이 발생해도 헤더가 맨 위에 있도록 하기 위해 fixed(main을 가리고) */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+}
+
+header .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+header h1 {
+  /* 로고만 왼쪽으로 붙게 */
+  /* 붙이고 싶은 부분 빼고 다 auto로 주면 여백이 컨텐츠를 밀어서 0준쪽으로 붙게됨 */
+  margin: auto auto auto 0;
+  height: 3.2rem;
+}
+
+.profile-btn {
+  width: 4.4rem;
+  height: 4.4rem;
+  /* focus 됐을 때 동그랗게 보이게 하기 위해 img가 아니라 여기에 radius 줌 */
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profile-btn img {
+  width: 100%;
+  height: 100%;
+  /* 이미지가 중간으로 크롭되게 하기 위해 */
+  object-fit: cover;
+}
+
+.search-form {
+  flex: 0 0 20rem;
+  position: relative;
+}
+
+.search-form input {
+  width: 100%;
+  box-sizing: border-box;
+  background: none;
+  border: 1px solid rgba(var(--rgb-light), 0.5);
+  border-radius: 2.2rem;
+  height: 4.4rem;
+  text-indent: 1em;
+  color: rgb(var(--rgb-light));
+  opacity: 0.5;
+  transition: all 0.3s;
+}
+.search-form input:focus {
+  opacity: 1;
+}
+.search-form input::placeholder {
+  color: rgb(var(--rgb-light));
+}
+
+.search-form button {
+  position: absolute;
+  top: 50%;
+  right: 1.4rem;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  width: 3.2rem;
+  height: 3.2rem;
+  padding: 0.3em;
+}
+
+.search-form button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+

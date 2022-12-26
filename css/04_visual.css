@@ -1,0 +1,9 @@
+main {
+  flex-grow: 1;
+  /* background: lightpink; */
+  padding-top: 5em;
+}
+
+.visual {
+  background: url(../img/main-visual.jpg) no-repeat 50% 50% / cover;
+}

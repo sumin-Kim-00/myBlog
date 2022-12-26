@@ -1,0 +1,28 @@
+
+.wrap{
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 100vh;
+}
+
+/* 모바일 사파리 화면에서 높이를 100vh로 줄 경우
+주소창이 하단을 가리는 현상을 해결하기 위한 CSS */
+@supports (-webkit-touch-callout: none) {
+  .wrap {
+    min-height: -webkit-fill-available;
+  }
+}
+
+
+footer {
+  background: skyblue;
+  height: 5em;
+}
+
+.max-width {
+  /* 둘 중에 작은값 선택 */
+  width: min(calc(var(--max-width) * 1rem), calc(100% - 10vw)); 
+  /* calc(100% - 10vw) - 줄어들어도 양 옆에 10vw 여백 주겠다! */
+  margin: auto;
+  height: 5em;
+}
